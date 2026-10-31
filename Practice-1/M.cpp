@@ -8,13 +8,9 @@ int main(void) {
     long long last;
     long long tens;
     scanf("%lld", &n);
-    if (n < 10) {
-        printf("0\n");
-    } else {
-        last = n % 10;
-        tens = (n / 10) % 10;
-        printf("%d\n", last > tens && last >= 2);
-    }
+    last = n % 10;
+    tens = (n / 10) % 10;
+    printf("%d\n", n >= 10 && last > tens && last >= 2);
     return 0;
 }
 /* Author: Bạch Ngọc Đức - Cross

@@ -4,16 +4,6 @@
 #include <string.h>
 #include <stdbool.h>
 
-static void print_number(double value) {
-    char text[64];
-    if (fabs(value) < 0.000005) value = 0.0;
-    snprintf(text, sizeof(text), "%.5f", value);
-    char *end = text + strlen(text) - 1;
-    while (end > text && *end == '0') *end-- = '\0';
-    if (end > text && *end == '.') *end = '\0';
-    fputs(text, stdout);
-}
-
 int main(void) {
     double ax, ay, bx, by, cx, cy;
     scanf("%lf %lf %lf %lf %lf %lf", &ax, &ay, &bx, &by, &cx, &cy);
@@ -21,13 +11,9 @@ int main(void) {
     double bc = hypot(bx - cx, by - cy);
     double ca = hypot(cx - ax, cy - ay);
     double perimeter = ab + bc + ca;
-    if (perimeter == 0.0) return 0;
-    double x = (bc * ax + ca * bx + ab * cx) / perimeter;
-    double y = (bc * ay + ca * by + ab * cy) / perimeter;
-    print_number(x);
-    putchar(' ');
-    print_number(y);
-    putchar('\n');
+    double x = perimeter == 0.0 ? 0.0 : (bc * ax + ca * bx + ab * cx) / perimeter;
+    double y = perimeter == 0.0 ? 0.0 : (bc * ay + ca * by + ab * cy) / perimeter;
+    perimeter == 0.0 ? 0 : printf("%.5f %.5f\n", x, y);
     return 0;
 }
 /* Author: Bạch Ngọc Đức - Cross
