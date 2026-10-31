@@ -3,6 +3,9 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdbool.h>
-int main(void) { printf("HeLl0 ITiS.\n"); return 0; }
+int main(void) {
+    printf("HeLl0 ITiS.\n");
+    return 0;
+}
 /* Author: Bạch Ngọc Đức - Cross
 From ITIS with love */

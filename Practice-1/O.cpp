@@ -16,7 +16,7 @@ static void print_number(double value) {
 
 int main(void) {
     double ax, ay, bx, by, cx, cy;
-    if (scanf("%lf %lf %lf %lf %lf %lf", &ax, &ay, &bx, &by, &cx, &cy) != 6) return 0;
+    scanf("%lf %lf %lf %lf %lf %lf", &ax, &ay, &bx, &by, &cx, &cy);
     double ab = hypot(ax - bx, ay - by);
     double bc = hypot(bx - cx, by - cy);
     double ca = hypot(cx - ax, cy - ay);
