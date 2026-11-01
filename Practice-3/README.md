@@ -74,4 +74,4 @@ Các bài dùng C thuần, `int main()`, `scanf` và `printf`. Practice 3 cho ph
 
 ## Bài R: Tam giác kỳ diệu
 
-`testCases` là số bộ test; `n` là số que; `values` lưu các giá trị `a`; `answer` là số cách chọn ba que tạo thành tam giác; `left`, `right` dùng để đếm nhanh sau khi sắp xếp.
+`testCases` là số bộ test; `n` là số que; `frequency` là mảng tần suất của các giá trị `a`; `answer` là số cách chọn ba que tạo thành tam giác; `smaller` là số que có giá trị nhỏ hơn giá trị đang xét. Bài này dùng mảng tần suất, không dùng sort.

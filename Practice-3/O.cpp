@@ -3,7 +3,7 @@
 int main() {
     int n;
     long long k;
-    static long long values[1000000];
+    long long values[1000000];
     long long maximum = 0;
     long long minimum = 0;
     scanf("%d %lld", &n, &k);

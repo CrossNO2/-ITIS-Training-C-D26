@@ -5,7 +5,7 @@ int main() {
     int queries;
     int left;
     int right;
-    static long long prefix[1000001];
+    long long prefix[1000001];
     scanf("%d %d", &n, &queries);
     prefix[0] = 0;
     for (int i = 1; i <= n; i++) {

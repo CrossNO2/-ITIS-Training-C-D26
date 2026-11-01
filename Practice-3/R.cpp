@@ -1,41 +1,24 @@
 #include <stdio.h>
 
-void sortValues(long long values[], int left, int right) {
-    int i = left;
-    int j = right;
-    long long pivot = values[(left + right) / 2];
-    while (i <= j) {
-        while (values[i] < pivot) i++;
-        while (values[j] > pivot) j--;
-        if (i <= j) {
-            long long temporary = values[i];
-            values[i] = values[j];
-            values[j] = temporary;
-            i++;
-            j--;
-        }
-    }
-    if (left < j) sortValues(values, left, j);
-    if (i < right) sortValues(values, i, right);
-}
-
 int main() {
     int testCases;
     int n;
-    long long values[50000];
+    int frequency[50001] = {0};
+    int value;
     scanf("%d", &testCases);
     for (int test = 0; test < testCases; test++) {
         scanf("%d", &n);
-        for (int i = 0; i < n; i++) scanf("%lld", &values[i]);
-        sortValues(values, 0, n - 1);
+        for (int i = 0; i <= n; i++) frequency[i] = 0;
+        for (int i = 0; i < n; i++) {
+            scanf("%d", &value);
+            frequency[value]++;
+        }
         long long answer = 0;
-        for (int i = 0; i < n - 2; i++) {
-            int right = i + 2;
-            for (int left = i + 1; left < n - 1; left++) {
-                if (right <= left) right = left + 1;
-                while (right < n && values[i] + values[left] > values[right]) right++;
-                answer += right - left - 1;
-            }
+        long long smaller = 0;
+        for (int i = 0; i <= n; i++) {
+            answer += (long long)frequency[i] * (frequency[i] - 1) / 2 * smaller;
+            answer += (long long)frequency[i] * (frequency[i] - 1) * (frequency[i] - 2) / 6;
+            smaller += frequency[i];
         }
         printf("%lld\n", answer);
     }
