@@ -14,3 +14,5 @@ int main() {
     printf("%lld\n", pairs);
     return 0;
 }
+/* Author: Bạch Ngọc Đức - Cross
+From ITIS with love */

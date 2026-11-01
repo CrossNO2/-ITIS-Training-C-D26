@@ -23,3 +23,5 @@ int main() {
 
     return 0;
 }
+/* Author: Bạch Ngọc Đức - Cross
+From ITIS with love */
