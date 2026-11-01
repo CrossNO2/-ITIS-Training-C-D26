@@ -4,7 +4,7 @@
 #include <string.h>
 #include <stdbool.h>
 int main() {
-    printf("\"HeLl0 ITiS.\\n\"\n");
+    printf("\"HeLl0 ITiS.\"");
     return 0;
 }
 /* Author: Bạch Ngọc Đức - Cross
