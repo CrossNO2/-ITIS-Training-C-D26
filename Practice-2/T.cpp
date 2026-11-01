@@ -16,6 +16,7 @@ int main() {
         value /= 5;
     }
     if (value != 1) printf("NO\n");
-    else printf("%d\n", twos > fives ? twos : fives);
+    else if (twos > fives) printf("%d\n", twos);
+    else printf("%d\n", fives);
     return 0;
 }

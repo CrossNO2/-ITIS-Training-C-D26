@@ -1,23 +1,9 @@
 #include <stdio.h>
 
-int isLeapYear(int year) {
-    return year % 400 == 0 || (year % 4 == 0 && year % 100 != 0);
-}
-
-int daysInMonth(int month, int year) {
-    if (month == 2) {
-        return isLeapYear(year) ? 29 : 28;
-    }
-    return (month == 4 || month == 6 || month == 9 || month == 11) ? 30 : 31;
-}
-
-void printDate(int day, int month, int year) {
-    printf("%02d/%02d/%04d", day, month, year);
-}
-
 int main() {
     int day, month, year;
     char firstSlash, secondSlash;
+    int days;
     scanf("%d%c%d%c%d", &day, &firstSlash, &month, &secondSlash, &year);
 
     int yesterdayDay = day - 1;
@@ -29,13 +15,25 @@ int main() {
             yesterdayMonth = 12;
             --yesterdayYear;
         }
-        yesterdayDay = daysInMonth(yesterdayMonth, yesterdayYear);
+        days = 31;
+        if (yesterdayMonth == 2) {
+            if (yesterdayYear % 400 == 0 || (yesterdayYear % 4 == 0 && yesterdayYear % 100 != 0)) days = 29; else days = 28;
+        } else if (yesterdayMonth == 4 || yesterdayMonth == 6 || yesterdayMonth == 9 || yesterdayMonth == 11) {
+            days = 30;
+        }
+        yesterdayDay = days;
     }
 
     int tomorrowDay = day + 1;
     int tomorrowMonth = month;
     int tomorrowYear = year;
-    if (tomorrowDay > daysInMonth(tomorrowMonth, tomorrowYear)) {
+    days = 31;
+    if (tomorrowMonth == 2) {
+        if (tomorrowYear % 400 == 0 || (tomorrowYear % 4 == 0 && tomorrowYear % 100 != 0)) days = 29; else days = 28;
+    } else if (tomorrowMonth == 4 || tomorrowMonth == 6 || tomorrowMonth == 9 || tomorrowMonth == 11) {
+        days = 30;
+    }
+    if (tomorrowDay > days) {
         tomorrowDay = 1;
         ++tomorrowMonth;
         if (tomorrowMonth == 13) {
@@ -45,9 +43,9 @@ int main() {
     }
 
     printf("Yesterday: ");
-    printDate(yesterdayDay, yesterdayMonth, yesterdayYear);
+    printf("%02d/%02d/%04d", yesterdayDay, yesterdayMonth, yesterdayYear);
     printf("\nTomorrow: ");
-    printDate(tomorrowDay, tomorrowMonth, tomorrowYear);
+    printf("%02d/%02d/%04d", tomorrowDay, tomorrowMonth, tomorrowYear);
     printf(".\n");
     return 0;
 }
