@@ -3,7 +3,7 @@
 int main() {
     long long n;
     long long d;
-    if (scanf("%lld", &n) != 1) return 0;
+    scanf("%lld", &n);
     if (n % 2 == 0) {
         printf("%lld\n", n / 2);
         return 0;

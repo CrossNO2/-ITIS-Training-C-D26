@@ -5,7 +5,7 @@ int main() {
     unsigned long long value;
     int twos = 0;
     int fives = 0;
-    if (scanf("%llu", &n) != 1) return 0;
+    scanf("%llu", &n);
     value = n;
     while (value % 2 == 0) {
         twos++;

@@ -5,7 +5,7 @@ int main() {
     int a;
     int b;
     int e;
-    if (scanf("%d %d", &a, &b) != 2) return 0;
+    scanf("%d %d", &a, &b);
     for (e = a + 1; e <= 62; e++) {
         double fractional = e * log10(2.0);
         fractional -= floor(fractional);

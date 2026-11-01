@@ -4,7 +4,7 @@ int main() {
     unsigned long long n;
     unsigned long long p;
     int first = 1;
-    if (scanf("%llu", &n) != 1) return 0;
+    scanf("%llu", &n);
     for (p = 2; p <= n / p; p += 2) {
         int exponent = 0;
         while (n % p == 0) {

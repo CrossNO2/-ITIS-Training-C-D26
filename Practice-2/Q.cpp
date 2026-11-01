@@ -3,7 +3,7 @@
 
 int main() {
     long long n;
-    if (scanf("%lld", &n) != 1) return 0;
+    scanf("%lld", &n);
     printf("%.6f\n", lgamma((double)n + 1.0));
     return 0;
 }
