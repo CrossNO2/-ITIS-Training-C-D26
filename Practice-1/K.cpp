@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdbool.h>
-int main(void) {
+int main() {
     unsigned long long n;
     unsigned long long r;
     scanf("%llu", &n);

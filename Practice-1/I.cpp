@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdbool.h>
-int main(void) {
+int main() {
     long long n;
     scanf("%lld", &n);
     printf("%lld minutes\n", n * (n + 1) / 2);

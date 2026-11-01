@@ -1,9 +1,35 @@
-# Practice-1
+# Code Solve Practice 1 Training D26
 
-This directory contains `A.cpp` through `R.cpp`. Each file is a `.cpp` file containing C-style code only and follows the required five-header order, `main()` entry point, and footer.
+Practice 1 gồm các bài A–R, tập trung vào phép tính số học, xử lý thời gian, điều kiện và hình học cơ bản:
 
-`E.cpp` implements the recovered statement for “Đền bù cúm gia cầm”. For input `a b c m n k`, it outputs `m*a + k*b + (n-m-k)*c`, where the three terms are the compensation for type 1, type 2, and type 3 chickens. The official statement does not display numeric input constraints, so the implementation uses `long long` for all inputs and the total; it assumes the valid statement relationship `0 <= m + k <= n`.
+- **A** — In lời chào cố định.
+- **B** — Tính tổng, hiệu, tích và thương của hai số.
+- **C** — Tính số nguyên theo công thức từ `n`.
+- **D** — Đổi số giây thành giờ, phút và giây.
+- **E** — Tính tổng tiền đền bù theo ba loại gà.
+- **F** — Tính số ngày cần thiết theo năng suất tăng trưởng.
+- **G** — Tính số lượng còn thiếu từ tổng và số đã biết.
+- **H** — Tính số cặp từ số lượng phần tử.
+- **I** — Tính tổng số phút theo quy luật tăng dần.
+- **J** — So sánh hai số.
+- **K** — Kiểm tra số chính phương.
+- **L** — Đếm bội của `c` trong đoạn `[a, b]`.
+- **M** — Kiểm tra chữ số hàng đơn vị theo điều kiện đề bài.
+- **N** — Tính khoảng cách từ điểm đến đường thẳng.
+- **O** — Tính trọng tâm tam giác theo độ dài các cạnh.
+- **P** — Tính chữ số một chữ số theo tổng chữ số modulo 9.
+- **Q** — Tính phần nguyên căn bậc hai.
+- **R** — Tính chữ số cuối và kiểm tra điều kiện chẵn.
 
-All files were audited for C++-only syntax, STL usage, the forbidden `if (!scanf(...)) return 0;` pattern, and the required template. The implementable files compile as C with `gcc -x c`; local sample and edge checks were run for the recovered implementations. These checks are not Codeforces submissions and do not establish AC status. O and P–R still require their official statements for semantic certification.
+## Quy ước
 
-The repository is currently at commit `90350a4` (`Complete Training C D26 Practice 1 audit`). `.build/` contains untracked generated executables and was left untouched; no force-push or overwrite was performed.
+- Viết bằng **C thuần**, dù tên tệp dùng phần mở rộng `.cpp`.
+- Mỗi chương trình dùng `int main();`.
+- Không dùng `if`, `else`, `for` hoặc `while`.
+- Không dùng mẫu `if (!scanf(...)) return 0;`.
+- Mỗi câu lệnh đặt trên một dòng rõ ràng.
+- Có thể dùng toán tử điều kiện và các hàm trong thư viện C khi phù hợp.
+
+## Build và test
+
+Có thể build/test local bằng compiler C, ví dụ `gcc -x c`. Kết quả local chỉ xác nhận khả năng biên dịch và các kiểm tra cục bộ; **không phải kết quả Codeforces AC**.

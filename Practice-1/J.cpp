@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdbool.h>
-int main(void) {
+int main() {
     long long x;
     long long y;
     scanf("%lld%lld", &x, &y);

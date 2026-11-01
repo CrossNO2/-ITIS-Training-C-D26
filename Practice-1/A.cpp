@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdbool.h>
-int main(void) {
+int main() {
     printf("HeLl0 ITiS.\n");
     return 0;
 }

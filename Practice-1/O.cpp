@@ -4,7 +4,7 @@
 #include <string.h>
 #include <stdbool.h>
 
-int main(void) {
+int main() {
     double ax, ay, bx, by, cx, cy;
     scanf("%lf %lf %lf %lf %lf %lf", &ax, &ay, &bx, &by, &cx, &cy);
     double ab = hypot(ax - bx, ay - by);
