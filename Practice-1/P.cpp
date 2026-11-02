@@ -7,7 +7,8 @@ int main() {
     long long n;
     int r;
     scanf("%lld", &n);
-    r = n == 0 ? 0 : (n % 9 == 0 ? 9 : (int)(n % 9));
+    r = (int)(n % 9);
+    r += 9 * (n != 0 && r == 0);
     printf("%d", r);
     return 0;
 }

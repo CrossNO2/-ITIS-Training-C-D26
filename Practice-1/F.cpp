@@ -8,7 +8,9 @@ int main() {
     long long b;
     long long h;
     scanf("%lld%lld%lld", &a, &b, &h);
-    printf("%lld", a >= h ? 1 : (h - b + a - b - 1) / (a - b));
+    long long result = (h - b + a - b - 1) / (a - b);
+    result = result * (a < h) + (a >= h);
+    printf("%lld", result);
     return 0;
 }
 /* Author: Bạch Ngọc Đức - Cross

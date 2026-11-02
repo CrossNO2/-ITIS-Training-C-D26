@@ -3,7 +3,12 @@
 
 int main() {
     long long n;
+    long long i;
+    double result = 0.0;
     scanf("%lld", &n);
-    printf("%.6f\n", lgamma((double)n + 1.0));
+    for (i = 1; i <= n; i++) {
+        result += log((double)i);
+    }
+    printf("%.6f\n", result);
     return 0;
 }
